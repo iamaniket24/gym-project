@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Options</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{
+    --orange:#ffa500;
+}
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .payment-option {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    position: relative;
+    flex: 1; /* Equal width for all payment options */
+    max-width: 300px; /* Increase max-width for better layout */
+  }
+  
+  .payment-option:hover {
+    transform: translateY(-10px) scale(1.05); /* Add scale effect on hover */
+  }
+  
+  .payment-option img {
+    max-width: 150px; /* Increase max-width for larger images */
+    margin-bottom: 20px; /* Increase margin */
+  }
+  
+  .payment-button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-button:hover {
+    background-color: rgb(236, 196, 121);;
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 768px) {
+  .payment-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Additional styles for better visual appearance */
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+}
+</style>
+</head>
+<body>
+
+<h1>Select a Payment Option</h1>
+
+<div class="payment-options">
+  <div class="payment-option">
+    <img src="images/download.jpeg." alt="Credit/Debit Card">
+    <p>Credit/Debit Card</p>
+    <a href="card.html" class="payment-button">Pay with Card</a>
+  </div>
+  <div class="payment-option">
+    <img src="images/uuu.jpeg" alt="UPI">
+    <p>UPI</p>
+    <a href="upi.html" class="payment-button">Pay with UPI</a>
+  </div>
+ 
+</div>
+
+
+</body>
+</html>

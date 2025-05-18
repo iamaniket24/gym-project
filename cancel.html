@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Booking</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{
+    --orange:#ffa500;
+}
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #f2f2f2;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .reason-options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .reason-option {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            color: #444;
+        }
+        .reason-option input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: var(--orange);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(236, 196, 121);
+        }
+        .success-message {
+            color: #4CAF50;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .btn-yes {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .btn-yes:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cancel Membership</h1>
+        <form id="cancelForm">
+            <p>Please select a reason for cancelling your Membership:</p>
+            <div class="reason-options">
+                <div class="reason-option">
+                    <input type="radio" id="changeOfMind" name="reason" value="Change of mind">
+                    <label for="changeOfMind">Change of mind</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="priceDiscrepancy" name="reason" value="Price discrepancy">
+                    <label for="priceDiscrepancy">Price discrepancy</label>
+                </div>
+                
+                
+                <div class="reason-option">
+                    <input type="radio" id="financialReasons" name="reason" value="Financial reasons">
+                    <label for="financialReasons">Financial reasons</label>
+                </div>
+            </div>
+            <input type="submit" value="Cancel Membership">
+        </form>
+        <div id="successMessage" class="success-message" style="display: none;">
+            Your Membership is successfully cancelled. Your refund will be processed in 3 - 5 hours.
+            <br>
+           <a href="index.php"> <button class="btn-yes" onclick="orderAgain()">Ok</button></a>
+            <p>become a member of our fitness-TRIBE </p>
+        </div>
+    </div>
+
+    <script>
+        function orderAgain() {
+            alert("Book again from us.");
+        }
+
+        document.getElementById("cancelForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var successMessage = document.getElementById("successMessage");
+            successMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
